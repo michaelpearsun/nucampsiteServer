@@ -1,6 +1,5 @@
 const express = require('express');
-const { response } = require('../app');
-const Campsite = require('../models/campsite')
+const Campsite = require('../models/campsite');
 
 const campsiteRouter = express.Router();
 
@@ -20,7 +19,7 @@ campsiteRouter.route('/')
         console.log('Campsite Created', campsite);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
-        res.json(campsites)
+        res.json(campsite)
     })
     .catch(err => next(err));
 })
