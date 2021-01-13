@@ -11,6 +11,10 @@ const promotionSchema = new Schema({
         required: true,
         unique: true
     },
+    description: {
+        type: String,
+        required: true
+    },
     image: {
         type: String,
         required: true
@@ -24,10 +28,6 @@ const promotionSchema = new Schema({
         required: true,
         min: 0
     },
-    description: {
-        type: String,
-        required: true
-    }
 }, {
     timestamps: true
 });
